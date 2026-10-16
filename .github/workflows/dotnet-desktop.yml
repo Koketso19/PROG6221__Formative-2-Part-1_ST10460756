@@ -15,7 +15,7 @@ jobs:
     runs-on: windows-latest
 
     env:
-      Solution_Name: CybersecurityAwarenessBotGUI.sln
+      Solution_Name: CybersecurityAwarenessBotGUI/CybersecurityAwarenessBotGUI.sln
       Project_Name: CybersecurityAwarenessBotGUI
 
     steps:
