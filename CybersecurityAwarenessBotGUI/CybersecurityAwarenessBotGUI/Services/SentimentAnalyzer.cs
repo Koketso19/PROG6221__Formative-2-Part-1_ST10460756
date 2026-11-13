@@ -1,4 +1,4 @@
-﻿namespace CybersecurityAwarenessBotGUI
+﻿namespace CybersecurityAwarenessBotGUI.Services
 {
     public class SentimentAnalyzer
     {

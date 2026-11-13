@@ -14,11 +14,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Apex User\\source\\repos\\Koketso19\\PROG6221__Formative-2-Part-1_ST10460756\\CybersecurityAwarenessBotGUI\\CybersecurityAwarenessBotGUI\\CybersecurityAwarenessBotGUI.csproj",
+      "projectUniqueName": "C:\\Users\\Apex User\\Source\\Repos\\PROG6221__Formative-2-Part-1_ST10460756\\CybersecurityAwarenessBotGUI\\CybersecurityAwarenessBotGUI\\CybersecurityAwarenessBotGUI.csproj",
       "projectName": "CybersecurityAwarenessBotGUI",
-      "projectPath": "C:\\Users\\Apex User\\source\\repos\\Koketso19\\PROG6221__Formative-2-Part-1_ST10460756\\CybersecurityAwarenessBotGUI\\CybersecurityAwarenessBotGUI\\CybersecurityAwarenessBotGUI.csproj",
+      "projectPath": "C:\\Users\\Apex User\\Source\\Repos\\PROG6221__Formative-2-Part-1_ST10460756\\CybersecurityAwarenessBotGUI\\CybersecurityAwarenessBotGUI\\CybersecurityAwarenessBotGUI.csproj",
       "packagesPath": "C:\\Users\\Apex User\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Apex User\\source\\repos\\Koketso19\\PROG6221__Formative-2-Part-1_ST10460756\\CybersecurityAwarenessBotGUI\\CybersecurityAwarenessBotGUI\\obj\\",
+      "outputPath": "C:\\Users\\Apex User\\Source\\Repos\\PROG6221__Formative-2-Part-1_ST10460756\\CybersecurityAwarenessBotGUI\\CybersecurityAwarenessBotGUI\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"

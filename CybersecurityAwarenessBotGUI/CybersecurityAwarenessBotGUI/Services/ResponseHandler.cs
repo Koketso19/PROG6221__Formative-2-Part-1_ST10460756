@@ -1,7 +1,8 @@
 ﻿using System;
 using System.Collections.Generic;
+using CybersecurityAwarenessBotGUI.Models;
 
-namespace CybersecurityAwarenessBotGUI
+namespace CybersecurityAwarenessBotGUI.Services
 {
     public class ResponseHandler
     {

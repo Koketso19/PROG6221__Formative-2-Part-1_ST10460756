@@ -1,4 +1,4 @@
-﻿namespace CybersecurityAwarenessBotGUI
+﻿namespace CybersecurityAwarenessBotGUI.Models
 {
     public class UserProfile
     {
