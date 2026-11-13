@@ -18,3 +18,17 @@ C:\Users\Apex User\source\repos\Koketso19\PROG6221__Formative-2-Part-1_ST1046075
 C:\Users\Apex User\source\repos\Koketso19\PROG6221__Formative-2-Part-1_ST10460756\CybersecurityAwarenessBotGUI\CybersecurityAwarenessBotGUI\obj\Debug\net6.0-windows\CybersecurityAwarenessBotGUI.pdb
 C:\Users\Apex User\source\repos\Koketso19\PROG6221__Formative-2-Part-1_ST10460756\CybersecurityAwarenessBotGUI\CybersecurityAwarenessBotGUI\obj\Debug\net6.0-windows\CybersecurityAwarenessBotGUI.genruntimeconfig.cache
 C:\Users\Apex User\source\repos\Koketso19\PROG6221__Formative-2-Part-1_ST10460756\CybersecurityAwarenessBotGUI\CybersecurityAwarenessBotGUI\obj\Debug\net6.0-windows\ref\CybersecurityAwarenessBotGUI.dll
+C:\Users\Apex User\Source\Repos\PROG6221__Formative-2-Part-1_ST10460756\CybersecurityAwarenessBotGUI\CybersecurityAwarenessBotGUI\obj\Debug\net6.0-windows\CybersecurityAwarenessBotGUI.csproj.AssemblyReference.cache
+C:\Users\Apex User\Source\Repos\PROG6221__Formative-2-Part-1_ST10460756\CybersecurityAwarenessBotGUI\CybersecurityAwarenessBotGUI\obj\Debug\net6.0-windows\MainWindow.baml
+C:\Users\Apex User\Source\Repos\PROG6221__Formative-2-Part-1_ST10460756\CybersecurityAwarenessBotGUI\CybersecurityAwarenessBotGUI\obj\Debug\net6.0-windows\MainWindow.g.cs
+C:\Users\Apex User\Source\Repos\PROG6221__Formative-2-Part-1_ST10460756\CybersecurityAwarenessBotGUI\CybersecurityAwarenessBotGUI\obj\Debug\net6.0-windows\App.g.cs
+C:\Users\Apex User\Source\Repos\PROG6221__Formative-2-Part-1_ST10460756\CybersecurityAwarenessBotGUI\CybersecurityAwarenessBotGUI\obj\Debug\net6.0-windows\CybersecurityAwarenessBotGUI_MarkupCompile.cache
+C:\Users\Apex User\Source\Repos\PROG6221__Formative-2-Part-1_ST10460756\CybersecurityAwarenessBotGUI\CybersecurityAwarenessBotGUI\obj\Debug\net6.0-windows\CybersecurityAwarenessBotGUI.g.resources
+C:\Users\Apex User\Source\Repos\PROG6221__Formative-2-Part-1_ST10460756\CybersecurityAwarenessBotGUI\CybersecurityAwarenessBotGUI\obj\Debug\net6.0-windows\CybersecurityAwarenessBotGUI.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Apex User\Source\Repos\PROG6221__Formative-2-Part-1_ST10460756\CybersecurityAwarenessBotGUI\CybersecurityAwarenessBotGUI\obj\Debug\net6.0-windows\CybersecurityAwarenessBotGUI.AssemblyInfoInputs.cache
+C:\Users\Apex User\Source\Repos\PROG6221__Formative-2-Part-1_ST10460756\CybersecurityAwarenessBotGUI\CybersecurityAwarenessBotGUI\obj\Debug\net6.0-windows\CybersecurityAwarenessBotGUI.AssemblyInfo.cs
+C:\Users\Apex User\Source\Repos\PROG6221__Formative-2-Part-1_ST10460756\CybersecurityAwarenessBotGUI\CybersecurityAwarenessBotGUI\obj\Debug\net6.0-windows\CybersecurityAwarenessBotGUI.csproj.CoreCompileInputs.cache
+C:\Users\Apex User\Source\Repos\PROG6221__Formative-2-Part-1_ST10460756\CybersecurityAwarenessBotGUI\CybersecurityAwarenessBotGUI\obj\Debug\net6.0-windows\CybersecurityAwarenessBotGUI.sourcelink.json
+C:\Users\Apex User\Source\Repos\PROG6221__Formative-2-Part-1_ST10460756\CybersecurityAwarenessBotGUI\CybersecurityAwarenessBotGUI\obj\Debug\net6.0-windows\CybersecurityAwarenessBotGUI.dll
+C:\Users\Apex User\Source\Repos\PROG6221__Formative-2-Part-1_ST10460756\CybersecurityAwarenessBotGUI\CybersecurityAwarenessBotGUI\obj\Debug\net6.0-windows\refint\CybersecurityAwarenessBotGUI.dll
+C:\Users\Apex User\Source\Repos\PROG6221__Formative-2-Part-1_ST10460756\CybersecurityAwarenessBotGUI\CybersecurityAwarenessBotGUI\obj\Debug\net6.0-windows\CybersecurityAwarenessBotGUI.pdb

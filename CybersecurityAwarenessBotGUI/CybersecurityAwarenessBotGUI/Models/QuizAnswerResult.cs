@@ -6,7 +6,12 @@ using System.Threading.Tasks;
 
 namespace CybersecurityAwarenessBotGUI.Models
 {
-    internal class QuizAnswerResult
+    namespace CybersecurityAwarenessBotGUI.Models
     {
+        public class QuizAnswerResult
+        {
+            public bool IsCorrect { get; set; }
+            public string Feedback { get; set; } = "";
+        }
     }
 }

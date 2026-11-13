@@ -6,10 +6,10 @@ namespace CybersecurityAwarenessBotGUI.Services
 {
     public class ResponseHandler
     {
-        private Random random = new Random();
+        private readonly Random random = new Random();
+        private readonly Dictionary<string, int> lastTipIndex = new Dictionary<string, int>();
 
-        // Lists for Random Responses (Part 2 requirement)
-        private List<string> passwordTips = new List<string>
+        private readonly List<string> passwordTips = new List<string>
         {
             "Use a mix of uppercase, lowercase, numbers, and symbols.",
             "Never reuse passwords across different sites.",
@@ -17,7 +17,7 @@ namespace CybersecurityAwarenessBotGUI.Services
             "Enable Two-Factor Authentication (2FA) wherever possible."
         };
 
-        private List<string> phishingTips = new List<string>
+        private readonly List<string> phishingTips = new List<string>
         {
             "Never click on suspicious links in emails or SMS.",
             "Always check the sender's email address carefully.",
@@ -25,7 +25,7 @@ namespace CybersecurityAwarenessBotGUI.Services
             "If in doubt, contact the organisation directly using their official website."
         };
 
-        private List<string> privacyTips = new List<string>
+        private readonly List<string> privacyTips = new List<string>
         {
             "Review your privacy settings on social media regularly.",
             "Be careful about what personal information you share online.",
@@ -37,13 +37,14 @@ namespace CybersecurityAwarenessBotGUI.Services
         {
             string cleanedInput = input.ToLower().Trim();
 
-            // --- 1. HANDLE SENTIMENT FIRST ---
-            if (sentiment == "worried")
+            if (sentiment == "worried" || sentiment == "frustrated")
             {
-                return $"It's completely understandable to feel that way, {user.Name}. Scammers can be very convincing. Let me share a tip to help you stay safe: {passwordTips[random.Next(passwordTips.Count)]}";
+                string prefix = sentiment == "worried"
+                    ? $"It's completely understandable to feel that way, {user.Name}. Scammers can be very convincing."
+                    : $"I hear you, {user.Name}. Let's slow down and take it one step at a time.";
+                return $"{prefix} Here's a tip: {TipForTopic(user.LastTopic)}";
             }
 
-            // --- 2. HANDLE MEMORY (Favourite Topic) ---
             if (cleanedInput.Contains("i'm interested in") || cleanedInput.Contains("i am interested in"))
             {
                 int index = cleanedInput.IndexOf("interested in") + 14;
@@ -52,52 +53,64 @@ namespace CybersecurityAwarenessBotGUI.Services
                 return $"Great! I'll remember that you're interested in {topic}. It's a crucial part of staying safe online.";
             }
 
-            // --- 3. HANDLE FOLLOW-UP (Conversation Flow) ---
             if (cleanedInput.Contains("another tip") || cleanedInput.Contains("tell me more") || cleanedInput.Contains("explain more"))
             {
-                if (user.LastTopic == "password") return GetRandomTip(passwordTips);
-                if (user.LastTopic == "phishing") return GetRandomTip(phishingTips);
-                if (user.LastTopic == "privacy") return GetRandomTip(privacyTips);
+                if (user.LastTopic == "password") return GetRandomTip(passwordTips, "password");
+                if (user.LastTopic == "phishing") return GetRandomTip(phishingTips, "phishing");
+                if (user.LastTopic == "privacy") return GetRandomTip(privacyTips, "privacy");
                 return "What topic would you like to learn more about? (Password, Phishing, or Privacy)";
             }
 
-            // --- 4. KEYWORD RECOGNITION & BASIC RESPONSES ---
             if (cleanedInput.Contains("how are you"))
-            {
                 return $"I'm functioning perfectly, {user.Name}! I'm here to help you stay safe online.";
-            }
-            else if (cleanedInput.Contains("purpose"))
-            {
+
+            if (cleanedInput.Contains("purpose"))
                 return "My purpose is to educate South African citizens about cybersecurity threats like phishing, malware, and safe browsing.";
-            }
-            else if (cleanedInput.Contains("password"))
+
+            if (cleanedInput.Contains("password") || cleanedInput.Contains("login") || cleanedInput.Contains("2fa"))
             {
                 user.LastTopic = "password";
-                return GetRandomTip(passwordTips);
+                return WrapWithFavourite(user, "password", GetRandomTip(passwordTips, "password"));
             }
-            else if (cleanedInput.Contains("phishing"))
+            if (cleanedInput.Contains("phishing") || cleanedInput.Contains("scam") || cleanedInput.Contains("suspicious link"))
             {
                 user.LastTopic = "phishing";
-                return GetRandomTip(phishingTips);
+                return WrapWithFavourite(user, "phishing", GetRandomTip(phishingTips, "phishing"));
             }
-            else if (cleanedInput.Contains("privacy"))
+            if (cleanedInput.Contains("privacy") || cleanedInput.Contains("safe browsing") || cleanedInput.Contains("vpn"))
             {
                 user.LastTopic = "privacy";
-                return GetRandomTip(privacyTips);
+                return WrapWithFavourite(user, "privacy", GetRandomTip(privacyTips, "privacy"));
             }
-            else if (cleanedInput.Contains("exit") || cleanedInput.Contains("bye"))
-            {
+
+            if (cleanedInput.Contains("exit") || cleanedInput.Contains("bye"))
                 return "EXIT";
-            }
-            else
-            {
-                return "I didn't quite understand that. Could you please rephrase? Try asking about 'Password', 'Phishing', or 'Privacy'.";
-            }
+
+            return "I didn't quite understand that. Could you please rephrase? Try asking about 'Password', 'Phishing', or 'Privacy'.";
         }
 
-        private string GetRandomTip(List<string> tips)
+        private string WrapWithFavourite(UserProfile user, string topic, string tip)
         {
-            return "Tip: " + tips[random.Next(tips.Count)];
+            if (!string.IsNullOrEmpty(user.FavouriteTopic) && user.FavouriteTopic.Contains(topic))
+                return $"Since you're interested in {user.FavouriteTopic}: {tip}";
+            return tip;
+        }
+
+        private string TipForTopic(string topic)
+        {
+            if (topic == "password") return GetRandomTip(passwordTips, "password");
+            if (topic == "phishing") return GetRandomTip(phishingTips, "phishing");
+            if (topic == "privacy") return GetRandomTip(privacyTips, "privacy");
+            return GetRandomTip(passwordTips, "password");
+        }
+
+        private string GetRandomTip(List<string> tips, string topicKey)
+        {
+            int idx = random.Next(tips.Count);
+            if (tips.Count > 1 && lastTipIndex.TryGetValue(topicKey, out int previous) && idx == previous)
+                idx = (idx + 1) % tips.Count;
+            lastTipIndex[topicKey] = idx;
+            return "Tip: " + tips[idx];
         }
     }
 }

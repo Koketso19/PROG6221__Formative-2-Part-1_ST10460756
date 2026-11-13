@@ -3,10 +3,16 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-
 namespace CybersecurityAwarenessBotGUI.Services
 {
-    internal class UserIntent
+    public enum UserIntent
     {
+        Unknown,
+        AddTask,
+        AddTaskWithReminder,
+        StartQuiz,
+        ShowTasks,
+        ShowActivityLog,
+        CybersecurityQuestion
     }
 }

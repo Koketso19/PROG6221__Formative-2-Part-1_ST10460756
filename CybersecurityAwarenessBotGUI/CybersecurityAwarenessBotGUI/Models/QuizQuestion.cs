@@ -1,12 +1,12 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using System.Collections.Generic;
 
 namespace CybersecurityAwarenessBotGUI.Models
 {
-    internal class QuizQuestion
+    public class QuizQuestion
     {
+        public string QuestionText { get; set; } = "";
+        public List<string> Options { get; set; } = new List<string>();
+        public int CorrectOptionIndex { get; set; }
+        public string Explanation { get; set; } = "";
     }
 }
