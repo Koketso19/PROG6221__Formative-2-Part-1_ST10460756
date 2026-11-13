@@ -1,12 +1,11 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace CybersecurityAwarenessBotGUI.Data
+﻿namespace CybersecurityAwarenessBotGUI.Data
 {
-    internal class DatabaseConfig
+    public static class DatabaseConfig
     {
+        public static string ConnectionString =
+            "Server=localhost;" +
+            "Database=CyberSecurityBotDB;" +
+            "Trusted_Connection=True;" +
+            "TrustServerCertificate=True;";
     }
 }

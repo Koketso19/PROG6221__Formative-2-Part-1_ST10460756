@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Apex User\\Source\\Repos\\PROG6221__Formative-2-Part-1_ST10460756\\CybersecurityAwarenessBotGUI\\CybersecurityAwarenessBotGUI\\CybersecurityAwarenessBotGUI.csproj": {}
+    "C:\\Users\\Apex User\\source\\repos\\PROG6221__Formative-2-Part-1_ST10460756\\CybersecurityAwarenessBotGUI\\CybersecurityAwarenessBotGUI\\CybersecurityAwarenessBotGUI.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Apex User\\Source\\Repos\\PROG6221__Formative-2-Part-1_ST10460756\\CybersecurityAwarenessBotGUI\\CybersecurityAwarenessBotGUI\\CybersecurityAwarenessBotGUI.csproj": {
+    "C:\\Users\\Apex User\\source\\repos\\PROG6221__Formative-2-Part-1_ST10460756\\CybersecurityAwarenessBotGUI\\CybersecurityAwarenessBotGUI\\CybersecurityAwarenessBotGUI.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Apex User\\Source\\Repos\\PROG6221__Formative-2-Part-1_ST10460756\\CybersecurityAwarenessBotGUI\\CybersecurityAwarenessBotGUI\\CybersecurityAwarenessBotGUI.csproj",
+        "projectUniqueName": "C:\\Users\\Apex User\\source\\repos\\PROG6221__Formative-2-Part-1_ST10460756\\CybersecurityAwarenessBotGUI\\CybersecurityAwarenessBotGUI\\CybersecurityAwarenessBotGUI.csproj",
         "projectName": "CybersecurityAwarenessBotGUI",
-        "projectPath": "C:\\Users\\Apex User\\Source\\Repos\\PROG6221__Formative-2-Part-1_ST10460756\\CybersecurityAwarenessBotGUI\\CybersecurityAwarenessBotGUI\\CybersecurityAwarenessBotGUI.csproj",
+        "projectPath": "C:\\Users\\Apex User\\source\\repos\\PROG6221__Formative-2-Part-1_ST10460756\\CybersecurityAwarenessBotGUI\\CybersecurityAwarenessBotGUI\\CybersecurityAwarenessBotGUI.csproj",
         "packagesPath": "C:\\Users\\Apex User\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Apex User\\Source\\Repos\\PROG6221__Formative-2-Part-1_ST10460756\\CybersecurityAwarenessBotGUI\\CybersecurityAwarenessBotGUI\\obj\\",
+        "outputPath": "C:\\Users\\Apex User\\source\\repos\\PROG6221__Formative-2-Part-1_ST10460756\\CybersecurityAwarenessBotGUI\\CybersecurityAwarenessBotGUI\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -51,6 +51,10 @@
         "net6.0-windows7.0": {
           "targetAlias": "net6.0-windows",
           "dependencies": {
+            "Microsoft.Data.SqlClient": {
+              "target": "Package",
+              "version": "[7.1.2, )"
+            },
             "MySql.Data": {
               "target": "Package",
               "version": "[26.10.0, )"

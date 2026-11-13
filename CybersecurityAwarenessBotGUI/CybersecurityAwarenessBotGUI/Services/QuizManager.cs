@@ -1,6 +1,5 @@
 ﻿using System.Collections.Generic;
 using CybersecurityAwarenessBotGUI.Models;
-using CybersecurityAwarenessBotGUI.Models.CybersecurityAwarenessBotGUI.Models;
 
 namespace CybersecurityAwarenessBotGUI.Services
 {
